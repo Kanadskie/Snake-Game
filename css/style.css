@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+@keyframes change-color {
+    0% { color: #264653; }
+    50% { color: #f4a261; }
+    100% { color: #2a9d8f; }
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.body {
+    font-family: 'Silkscreen', Helvetica, Arial;
+    text-transform: uppercase;
+    background: #e9c46a;
+    color: #264653;
+}
+
+.header {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text {
+    font-size: 30px;
+    margin: 0 0 0 20px;
+    color: #264653;
+    cursor: pointer;
+    transition-duration: .5s;
+    transition-property: transform;
+    animation: change-color 1s infinite;
+}
+
+.header-text:hover {
+    transform: translateX(30px);
+    transition-timing-function: linear;
+}
+
+.text-sm {
+    font-size: 20px;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+}
+
+.animated {
+    color: #e9c46a;
+}
+
+.animated--color {
+    display: inline-block;
+    color: #e6441b;
+    opacity: .8;
+    cursor: pointer;
+}
+
+.animated--color:hover {
+    transform: scale(1.4);
+}
+
+.animated:hover {
+    display: inline-block;
+    cursor: pointer;
+    animation: shake 1s infinite;
+}
+
+.score {
+    font-size: 15px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-text {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #2a9d8f;
+}
+
+.score-text:hover {
+    cursor: pointer;
+    animation: shake 1.5s;
+}
+
+.field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 25px;
+    border-radius: 10px;
+    border: 2px solid #264653;
+}
+
+.field:hover {
+    cursor: pointer;
+    animation: shake 1.5s;
+}
+
+.score-current {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-best {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 100px;
+}
+
+.result {
+    font-size: 20px;
+    color: #e76f51;
+}
+
+.prestart-field, .gameover-field {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+}
+
+.prestart-field, .gameover-field {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+}
+
+.prestart-field {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.game-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    margin: 10px auto;
+    background: #2a9d8f;
+    border-radius: 15px;
+    border: 2px solid #264653;
+}
+
+.cell {
+    width: 37px;
+    height: 37px;
+    background:#2a9d8f;
+}
+
+.control-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.control-left-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.control-down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10px;
+}
+
+.btn {
+    font-family: 'Silkscreen', Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    color: #e76f51;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    outline: 0;
+    background: transparent;
+    border: 2px solid #264653;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn:hover {
+    color: #2a9d8f;
+}
+
+.btn-up {
+    margin-bottom: -22px;
+}
+
+.btn-left {
+    margin: 0 100px 0 0;
+}
+
+.btn-down {
+    margin-top: -22px;
+}
+
+.pumpkin {
+    background-image: url('../icons/pumpkin.svg');
+}
+
+.snake-body {
+    background-image: url('../icons/body.svg');
+}
+
+
+@media screen and (max-width: 375px) {
+
+    .game-field {
+        width: 300px;
+        height: 300px;
+    }
+
+    .field {
+        width: 50px;
+        height: 25px;
+    }
+
+    .score {
+        font-size: 12px;
+    }
+
+    .prestart-field {
+        font-size: 15px;
+    }
+
+    .gameover-field {
+        font-size: 20px;
+    }
+
+    .text-sm {
+        font-size: 15px;
+    }
+    
+    .result {
+        font-size: 15px;
+    }
+
+    .cell {
+        width: 27px;
+        height: 27px;
+    }
+
+}
